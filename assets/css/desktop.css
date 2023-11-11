@@ -21,6 +21,8 @@ body{
     order: 2;
     height: 70dvh;
     font-size: 3.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-container__description{
