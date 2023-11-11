@@ -1,0 +1,175 @@
+:root{
+    --primary-color: #42C6B8;
+    --active-color: #FE7771;
+    --border-color: #7F7F7F;
+    --font-nav-color: #ffffff;
+    --font-content-color: #1C6872;
+    --bg-color: rgb(242, 242, 242);
+    --service-bg-color: #ffffff;
+    --main-container-bg-color: rgb(229, 229, 229); 
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+/* Header styles and its items/content */
+
+.header{
+    width: 100dvw;
+    height: 15dvh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo{
+    width: 5rem;
+    margin-bottom: 1rem;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: center;
+}
+
+.header__nav li{
+    list-style: none;
+    margin: 0 1rem;
+}
+
+.header__nav li a{
+    color: var(--font-nav-color);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header__nav li a:hover{
+    background-color: var(--active-color);
+}
+
+/* Container styles and its items/content */
+
+.main-container{
+    width: 100dvw;
+    height: 25dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-container-bg-color);
+}
+
+.main-container__image{
+    width: 25dvw;
+    max-width: 16rem;
+}
+
+.main-container__description{
+    text-align: center;
+    color: var(--font-content-color);
+    font-weight: bold;
+    padding: 0 5rem;
+}
+
+.aside{
+    width: 100dvw;
+    height: 45dvh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.4rem;
+    background-color: var(--bg-color);
+}
+
+.aside .service{
+    width: 80%;
+    max-width: 30rem;
+    height: 20%;
+    max-height: 15rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--service-bg-color);
+}
+
+.aside .service img{
+    width: 25%;
+    height: 75%;
+    margin-right: 1rem;
+}
+
+.aside .service p{
+    color: var(--font-content-color);
+}
+
+.footer{
+    background-color: var(--primary-color);
+    color: var(--font-nav-color);
+    width: 100dvw;
+    height: 15dvh;
+    display: grid;
+    place-items: center;
+}
+
+.footer a{
+    color: var(--font-nav-color);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer a:hover{
+    background-color: var(--active-color);
+}
+
+@media (max-height: 448px){
+    .main-container{
+        height: 40dvh;
+    }
+
+    .main-container__image{
+        max-width: 8rem;
+    }
+
+    .header{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem;
+    }
+
+    .header__logo{
+        width: 5rem;
+    }
+
+    .aside{
+        overflow: auto;
+        height: auto;
+    }
+
+    .aside .service{
+        min-height: 10rem;
+        margin: 1rem;
+    }
+
+}

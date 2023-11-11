@@ -1,0 +1,44 @@
+body{
+    font-size: 2rem;
+}
+
+.header__logo{
+    width: 7rem;
+}
+
+.content{
+    display: flex;
+    margin: auto;
+}
+
+.aside{
+    order: 1;
+    width: 70rem;
+    height: 70dvh;
+}
+
+.main-container{
+    order: 2;
+    height: 70dvh;
+    font-size: 3.5rem;
+}
+
+.main-container__description{
+    padding: 3rem 8rem;
+}
+
+.aside .service{
+    height: 18%;
+    max-height: 20rem;
+    font-size: 1.4rem;
+}
+
+@media (min-width: 1280px){
+    .main-container{
+        font-size: 4.5rem;
+    }
+
+    .aside{
+        font-size: 2.8rem;
+    }
+}
